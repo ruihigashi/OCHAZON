@@ -21,7 +21,7 @@ body{
     object-fit: cover;
 }
 
-header h1{
+header h3{
     padding-top: 2vh;
     width: 20vw;
     height: auto;
@@ -45,9 +45,10 @@ main input[type="text"]{
     margin-bottom: 3vh;
 }
 
-main h2{
+main p{
     margin: 5vh;
-    font-size: 2vw;
+    font-size: 3vw;
+    text-shadow: 5px 5px 2px #acacac;
 }
 
 main input[type="password"]{

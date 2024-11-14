@@ -1,0 +1,146 @@
+/* header{
+    display: flex;
+    background-color: rgba(0, 106, 127, 0.817);
+
+}
+
+body{
+    background-color: rgb(215, 215, 215);
+}
+
+header h1{
+    width: 20vw;
+    height: auto;
+    margin: 1px;
+    font-size: 2vw;
+}
+
+.OCHAZON{
+    width: 8vw;
+    height: 8vh;
+    object-fit: cover;
+}
+
+.notice{
+    width: 5vw;
+    height: 5vh;
+    object-fit: cover;
+}
+
+.user{
+    width: 5vw;
+    height: 5vh;
+    object-fit: cover;
+} */
+.app {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    background-color: rgba(0, 106, 127, 0.817);
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: left;
+    height: 10vh;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+}
+
+nav {
+    width: 18vw;
+    background-color: rgb(215, 215, 215);
+    box-sizing: border-box;
+    border: 2px solid rgb(0, 0, 0);
+    text-align: center;
+    border: none;
+}
+
+.home {
+    width: 100%;
+    height: 6vh;
+    border: none;
+    margin-top: 0.5vh;
+    font-size: 1.5vw;
+}
+
+.stock {
+    width: 100%;
+    height: 6vh;
+    border: none;
+    margin-top: 0.5vh;
+    font-size: 1.5vw;
+}
+
+.goods {
+    width: 100%;
+    height: 6vh;
+    border: none;
+    margin-top: 0.5vh;
+    font-size: 1.5vw;
+}
+
+.member {
+    width: 100%;
+    height: 6vh;
+    border: none;
+    margin-top: 0.5vh;
+    font-size: 1.5vw;
+}
+
+.authority {
+    width: 100%;
+    height: 6vh;
+    border: none;
+    margin-top: 0.5vh;
+    font-size: 1.5vw;
+}
+
+.flex-content {
+    flex-grow: 1;
+    background-color: rgb(215, 215, 215);
+    box-sizing: border-box;
+    border: 2px solid rgb(0, 0, 0);
+    border: none;
+}
+
+h1 {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-size: 2.3vw;
+    margin-left: 3vw;
+    margin-top: 1vh;
+}
+
+header h1 {
+    width: 20vw;
+    height: auto;
+    margin: 1px;
+    font-size: 2vw;
+}
+
+.OCHAZON {
+    width: 8vw;
+    height: 8vh;
+    object-fit: cover;
+}
+
+.notice {
+    width: 5vw;
+    height: 5vh;
+    object-fit: cover;
+}
+
+.user {
+    width: 5vw;
+    height: 5vh;
+    object-fit: cover;
+}
