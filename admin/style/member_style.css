@@ -1,3 +1,37 @@
+/* header{
+    display: flex;
+    background-color: rgba(0, 106, 127, 0.817);
+
+}
+
+body{
+    background-color: rgb(215, 215, 215);
+}
+
+header h1{
+    width: 20vw;
+    height: auto;
+    margin: 1px;
+    font-size: 2vw;
+}
+
+.OCHAZON{
+    width: 8vw;
+    height: 8vh;
+    object-fit: cover;
+}
+
+.notice{
+    width: 5vw;
+    height: 5vh;
+    object-fit: cover;
+}
+
+.user{
+    width: 5vw;
+    height: 5vh;
+    object-fit: cover;
+} */
 .app {
     width: 100vw;
     height: 100vh;
@@ -14,10 +48,6 @@ header {
     height: 10vh;
 }
 
-.header-right{
-    display: flex;
-}
-
 main {
     display: flex;
     flex-direction: row;
@@ -28,10 +58,10 @@ nav {
     width: 18vw;
     background-color: rgb(215, 215, 215);
     box-sizing: border-box;
+    border: 2px solid rgb(0, 0, 0);
     text-align: center;
     border: none;
 }
-
 
 .home {
     width: 100%;
@@ -77,35 +107,16 @@ nav {
     flex-grow: 1;
     background-color: rgb(215, 215, 215);
     box-sizing: border-box;
+    border: 2px solid rgb(0, 0, 0);
     border: none;
 }
 
-.home-container{
+.member-container{
     background-color: #ffffff;
     margin: 0.5vw;
     margin-bottom: 0;
-    margin-right: 0;
+    width: 100%;
     height: 100vh;
-}
-
-#calendar {
-    width: 2vw;
-    border-collapse: collapse;
-    font-family: sans-serif;
-}
-
-table {
-  width: 100%;
-}
-
-th, td {
-  text-align: center;
-  padding: 3vw;
-  font-size: 2vw;
-}
-
-td {
-  font-weight: bold;
 }
 
 h2 {
@@ -160,6 +171,3 @@ header h1 {
 .authority:hover{
     background-color: rgb(116, 116, 116);
 }
-
-
-
