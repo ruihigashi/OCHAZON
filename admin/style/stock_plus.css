@@ -1,0 +1,20 @@
+.flex{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-size: 2vw;
+}
+
+#back-btn{
+    margin-left: 0.5vw;
+    padding-top: 3.3vh;
+}
+
+h2{
+    margin-left: 2vw;
+}
+
+.category{
+    display: flex;
+    align-items: center;
+}
