@@ -69,16 +69,19 @@
 
                     <input type="text" id="number" name="site-search" class="site-search" placeholder="製品番号で検索" />
                     <input type="submit" value="検索" class="search">
+                    
+                    <input type="submit" value="リセット" class="reset">
 
-                </div>
-
-                <div class="btn-click">
-                    <img src="../images/reload.png" alt="クリックで再読み込み" id="reloadImage" style="cursor: pointer;">
-
-                    <a href="stock_registration.html">
-                        <img src="../images/plus.png" alt="クリックで遷移">
-                    </a>
-                    <img src="../images/choice.png" alt="選択">
+                    <div class="btn-click">
+                        <a href="javascript:location.reload()" rel="nofollow">
+                            <img src="../images/reload.png" alt="再読み込み" id="reload">
+                            </a>
+    
+                        <a href="stock_registration.html">
+                            <img src="../images/plus.png" alt="クリックで遷移" id="plus">
+                        </a>
+                        <img src="../images/choice.png" alt="選択" id="choice">
+                    </div>
                 </div>
 
                 </div>

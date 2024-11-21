@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/reset.css" type="text/css">
-    <link rel="stylesheet" href="../style/style.css" type="text/css">
     <link rel="stylesheet" href="../style/member_style.css" type="text/css">
     <title>管理システム ログイン</title>
 </head>
@@ -67,18 +66,14 @@
                     <input type="text" id="name" name="site-search" class="site-search" placeholder="会員名で検索" />
                     <input type="submit" value="検索" class="search">
 
-                    <input type="text" id="number" name="site-search" class="site-search" placeholder="会員番号で検索" />
+                    <input type="text" id="number" name="site-search" class="site-search" placeholder="会員IDで検索" />
                     <input type="submit" value="検索" class="search">
+                    
+                    <input type="submit" value="リセット" class="reset">
 
-                </div>
-
-                <div class="btn-click">
-                    <img src="../images/reload.png" alt="クリックで再読み込み" id="reloadImage" style="cursor: pointer;">
-
-                    <a href="stock_registration.html">
-                        <img src="../images/plus.png" alt="クリックで遷移">
-                    </a>
-                    <img src="../images/choice.png" alt="選択">
+                    <div class="btn-click">
+                        <img src="../images/choice.png" alt="選択" id="choice">
+                    </div>
                 </div>
 
                 </div>

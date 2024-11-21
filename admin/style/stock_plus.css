@@ -18,3 +18,262 @@ h2{
     display: flex;
     align-items: center;
 }
+
+.number{
+    display: flex;
+    align-items: center;
+}
+
+.name{
+    display: flex;
+    align-items: center;
+}
+
+.Supplier{
+    display: flex;
+    align-items: center;
+}
+
+.manager{
+    display: flex;
+    align-items: center;
+}
+
+.stock1{
+    display: flex;
+    align-items: center;
+}
+
+.remarks{
+    display: flex;
+    align-items: center;
+}
+
+.Registration-date{
+    display: flex;
+    align-items: center;
+}
+
+.category2{
+    padding-left: 0.3vw;
+    background-color: rgb(181, 181, 181);
+    width: 15vw;
+    height: 8vh;
+    line-height: 8vh;
+    border: 1px solid #7f7f7f;
+    font-size: large;
+}
+
+.category5{
+    padding: 0.5vw;
+    width: 40vw;
+    margin-left: 0.3vw;
+}
+
+.category6{
+    border: #7f7f7f solid 1px;
+    border-left: none;
+    border-right: none;
+    height: 8vh;
+    line-height: 8vh;
+    width: 66vw;
+}
+
+.number2{
+    padding-left: 0.3vw;
+    background-color: rgb(181, 181, 181);
+    width: 15vw;
+    height: 8vh;
+    line-height: 8vh;
+    border: #7f7f7f solid 1px;
+    border-top: none;
+    font-size: large;
+}
+
+.number5{
+    padding: 0.5vw;
+    width: 40vw;
+    margin-left: 0.3vw;
+}
+
+.number6{
+    border: #7f7f7f solid 1px;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    height: 8vh;
+    line-height: 8vh;
+    width: 66vw;
+}
+
+.name2{
+    padding-left: 0.3vw;
+    background-color: rgb(181, 181, 181);
+    width: 15vw;
+    height: 8vh;
+    line-height: 8vh;
+    border: #7f7f7f solid 1px;
+    border-top: none;
+    font-size: large;
+}
+
+.name5{
+    padding: 0.5vw;
+    width: 40vw;
+    margin-left: 0.3vw;
+}
+
+.name6{
+    border: #7f7f7f solid 1px;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    height: 8vh;
+    line-height: 8vh;
+    width: 66vw;
+}
+
+.Supplier2{
+        padding-left: 0.3vw;
+        background-color: rgb(181, 181, 181);
+        width: 15vw;
+        height: 8vh;
+        line-height: 8vh;
+        border: #7f7f7f solid 1px;
+        border-top: none;
+        font-size: large;
+}
+
+.Supplier5{
+    padding: 0.5vw;
+    width: 40vw;
+    margin-left: 0.3vw;
+}
+
+.Supplier6{
+    border: #7f7f7f solid 1px;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    height: 8vh;
+    line-height: 8vh;
+    width: 66vw;
+}
+
+.manager2{
+    padding-left: 0.3vw;
+    background-color: rgb(181, 181, 181);
+    width: 15vw;
+    height: 8vh;
+    line-height: 8vh;
+    border: #7f7f7f solid 1px;
+    border-top: none;
+    font-size: large;
+}
+
+.manager5{
+    padding: 0.5vw;
+    width: 40vw;
+    margin-left: 0.3vw;
+}
+
+.manager6{
+    border: #7f7f7f solid 1px;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    height: 8vh;
+    line-height: 8vh;
+    width: 66vw;
+}
+
+.stock2{
+    padding-left: 0.3vw;
+    background-color: rgb(181, 181, 181);
+    width: 15vw;
+    height: 8vh;
+    line-height: 8vh;
+    border: #7f7f7f solid 1px;
+    border-top: none;
+    font-size: large;
+}
+
+.stock5{
+    padding: 0.5vw;
+    width: 40vw;
+    margin-left: 0.3vw;
+}
+
+.stock6{
+    border: #7f7f7f solid 1px;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    height: 8vh;
+    line-height: 8vh;
+    width: 66vw;
+}
+
+.remarks2{
+    padding-left: 0.3vw;
+    background-color: rgb(181, 181, 181);
+    width: 15vw;
+    height: 8vh;
+    line-height: 8vh;
+    border: #7f7f7f solid 1px;
+    border-top: none;
+    font-size: large;
+}
+
+.remarks5{
+    padding: 0.5vw;
+    width: 40vw;
+    margin-left: 0.3vw;
+}
+
+.remarks6{
+    border: #7f7f7f solid 1px;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    height: 8vh;
+    line-height: 8vh;
+    width: 66vw;
+}
+
+.date{
+    padding-left: 0.3vw;
+    background-color: rgb(181, 181, 181);
+    width: 15vw;
+    height: 8vh;
+    line-height: 8vh;
+    border: #7f7f7f solid 1px;
+    border-top: none;
+    font-size: large;
+}
+
+.date4{
+        padding: 0.5vw;
+        width: 40vw;
+        margin-left: 0.3vw;
+}
+
+.date5{
+    border: #7f7f7f solid 1px;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    height: 8vh;
+    line-height: 8vh;
+    width: 66vw;
+}
+
+.Registration{
+    text-align: center;
+    margin: 3vh;
+}
+
+.Registration2{
+    width: 12vw;
+    height: 7vh;
+}

@@ -13,12 +13,13 @@ header {
     align-items: center;
     justify-content: left;
     height: 10vh;
+    width: 100%;
 }
 
 .title{ 
     align-items: center;
     display: flex;
-     margin-right: 40vw;
+     margin-right: 35vw;
      margin-left: 1vw;
 }
 
@@ -26,6 +27,7 @@ header {
     background-color:  rgba(2, 100, 120, 0.817);
     padding: 0.7vh;
     border: none;
+    width: 25vw;
 }
 
 main {
@@ -38,7 +40,6 @@ nav {
     width: 18vw;
     background-color: rgb(215, 215, 215);
     box-sizing: border-box;
-    border: 2px solid rgb(0, 0, 0);
     text-align: center;
     border: none;
 }
@@ -92,7 +93,6 @@ nav {
     flex-grow: 1;
     background-color: rgb(215, 215, 215);
     box-sizing: border-box;
-    border: 2px solid rgb(0, 0, 0);
     border: none;
 }
 
@@ -102,6 +102,7 @@ nav {
     margin-bottom: 0;
     width: 100%;
     height: 100vh;
+    border: none;
 }
 
 h2 {
@@ -151,15 +152,13 @@ header h1 {
 }
 
 .notice {
-    width: 5vw;
     height: 5vh;
-    object-fit: cover;
+    margin-left: 1.5vw;
 }
 
 .user {
-    width: 5vw;
     height: 5vh;
-    object-fit: cover;
+    margin-left: 1.5vw;
 }
 
 
@@ -205,8 +204,25 @@ select,option{
 
 .site-search{
     width: 15vw;
+
 }
 
 .btn-click{
     display: flex;
+    margin-left: 13vw;
+}
+
+#reload{
+margin-right: 3vw;
+}
+
+#plus{
+margin-right: 3vw;
+padding-top: 1vh;
+}
+
+#choice{
+margin-right: 1vw;
+margin-left: 1vw;
+width: 3vw;
 }
