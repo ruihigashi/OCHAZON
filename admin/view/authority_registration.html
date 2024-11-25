@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/reset.css" type="text/css">
     <link rel="stylesheet" href="../style/style.css" type="text/css">
-    <link rel="stylesheet" href="../style/stock_plus.css" type="text/css">
+    <link rel="stylesheet" href="../style/authority_plus.css" type="text/css">
     <title>管理システム ログイン</title>
 </head>
 
@@ -50,13 +50,13 @@
                     <a href="stock_management.html">
                         <img src="../images/back.png" alt="戻るボタン" id="back-btn">
                     </a>
-                    <h2>製品情報の入力</h2>
+                    <h2>管理者登録</h2>
                 </div>
             <div class="stock-container">
 
                     <div class="category">
                         <div class="category2">
-                            <label for="category3">分類</label>
+                            <label for="category3">姓</label>
                         </div>
                         <div class="category6">
                             <input type="text" id="category4" class="category5"/>
@@ -65,7 +65,7 @@
 
                     <div class="number">
                         <div class="number2">
-                            <label for="number3">品番号</label>
+                            <label for="number3">名</label>
                         </div>
                         <div class="number6">
                             <input type="text" id="number4" class="number5"/>
@@ -74,16 +74,16 @@
 
                     <div class="name">
                         <div class="name2">
-                            <label for="name3">品名</label>
+                            <label for="name3">生年月日</label>
                         </div>
                         <div class="name6">
-                            <input type="text" id="name4" class="name5"/>
+                            <input type="date" id="name4" class="name5"/>
                         </div>
                     </div>
 
                     <div class="Supplier">
                         <div class="Supplier2">
-                            <label for="Supplier3">仕入先名</label>
+                            <label for="Supplier3">住所</label>
                         </div>
                         <div class="Supplier6">
                             <input type="text" id="Supplier4" class="Supplier5"/>
@@ -92,67 +92,28 @@
 
                     <div class="manager">
                         <div class="manager2">
-                            <label for="manager3">担当者</label>
+                            <label for="manager3">メールアドレス</label>
                         </div>
                         <div class="manager6">
-                            <input type="text" id="manager4" class="manager5"/>
+                            <input type="text" id="manager4" class="manager5" required pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="有効なメールアドレスを入力してください"/>
                         </div>
                     </div>
 
                     <div class="stock1">
                         <div class="stock2">
-                            <label for="stock3">在庫</label>
+                            <label for="stock3">電話番号</label>
                         </div>
                         <div class="stock6">
-                            <input type="text" id="stock4" class="stock5"/>
+                            <input type="text" id="stock4" class="stock5" pattern="^\d{2,4}-\d{2,4}-\d{4}$" title="例: 03-1234-5678 または 090-1234-5678"/>
                         </div>
                     </div>
 
                     <div class="remarks">
                         <div class="remarks2">
-                            <label for="remarks3">備考</label>
+                            <label for="remarks3">パスワード</label>
                         </div>
                         <div class="remarks6">
-                            <input type="text" id="remarks4" class="remarks5"/>
-                        </div>
-                    </div>
-
-                    <div class="time">
-                        <div class="time2">
-                            <label for="time3">登録日時</label>
-                        </div>
-                        <div class="time4">
-                            <div class="time5">
-                            <script type="text/javascript">
-                                var weeks = new Array('日','月','火','水','木','金','土');
-                                
-                                var now = new Date();
-                                
-                                var year = now.getYear(); // 年
-                                var month = now.getMonth() + 1; // 月
-                                var day = now.getDate(); // 日
-                                var week = weeks[ now.getDay() ]; // 曜日
-                                var hour = now.getHours(); // 時
-                                var min = now.getMinutes(); // 分
-                                var sec = now.getSeconds(); // 秒
-                                
-                                if(year < 2000) { year += 1900; }
-                                
-                                // 数値が1桁の場合、頭に0を付けて2桁で表示する指定
-                                if(month < 10) { month = "0" + month; }
-                                if(day < 10) { day = "0" + day; }
-                                if(hour < 10) { hour = "0" + hour; }
-                                if(min < 10) { min = "0" + min; }
-                                if(sec < 10) { sec = "0" + sec; }
-                                
-                                // 表示開始
-                                document.write(year + '年' + month + '月' + day + '日（' + week + '）');
-                                document.write(hour + '時' + min + '分' + sec + '秒</b>');
-                                // 表示終了
-                                
-                                // -->
-                                </script>
-                                </div>
+                            <input type="text" id="remarks4" class="remarks5" pattern="[a-zA-Z0-9]{5,}" title="5文字以上の英数字を入力してください"/>
                         </div>
                     </div>
 

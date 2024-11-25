@@ -12,14 +12,17 @@
 <body>
     <di class="app">
         <header>
-            <img src="../images/OCHAZON.png" alt="ロゴ画像" class="OCHAZON">
-            <h1>管理システム</h1>
-            <input type="search" id="site-search" name="site-search" placeholder="search" />
+            <div class="title">
+                <img src="../images/OCHAZON.png" alt="ロゴ画像" class="OCHAZON">
+                <h1>管理システム</h1>
+            </div>
+
+            <input type="search" id="site-search" name="site-search" class="title-search" placeholder=" search" />
             <img src="../images/notice.png" alt="通知画像" class="notice">
             <img src="../images/user.png" alt="ユーザー画像" class="user">
         </header>
         <main>
-            <nav >
+            <nav>
             <form action="home_admin.html">
                 <input type="submit" value="ホーム" class="home"><br>
             </form>
@@ -43,23 +46,29 @@
             
             <div class="flex-content">
                 <h2>権限管理</h2>
-                <div class="authority-container">
-                    <div class="sub-back">
-                        <div class="sub-back2">
-                            <label for="all">全権管理者</label><br>
+            <div class="stock-container">
+                <div class="list">
+
+                    <div class="stock-list">
+                        <div class="stock-list2">
+                            <label for="select">一般管理者</label>
                         </div>
                     </div>
-                    
-                    <div class="sub-back3">
-                        <div class="sub-back4">
-                            <label for="general">一般管理者</label>
-                        </div>
+
+                    <div class="btn-click">
+                        <a href="authority_registration.html">
+                            <img src="../images/plus.png" alt="クリックで遷移" id="plus">
+                        </a>
+                        <img src="../images/choice.png" alt="選択" id="choice">
                     </div>
-                    
+                </div>
+
                 </div>
             </div>
 
+
         </main>
+        <script src="../script/reload.js/"></script>
 </body>
 
 </html>

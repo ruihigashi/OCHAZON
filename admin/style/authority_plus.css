@@ -54,11 +54,6 @@ h2{
     align-items: center;
 }
 
-.time{
-    display: flex;
-    align-items: center;
-}
-
 .category2{
     padding-left: 0.3vw;
     background-color: rgb(181, 181, 181);
@@ -71,7 +66,7 @@ h2{
 
 .category5{
     padding: 0.5vw;
-    width: 40vw;
+    width: 20vw;
     margin-left: 0.3vw;
 }
 
@@ -97,7 +92,7 @@ h2{
 
 .number5{
     padding: 0.5vw;
-    width: 40vw;
+    width: 20vw;
     margin-left: 0.3vw;
 }
 
@@ -281,29 +276,4 @@ h2{
 .Registration2{
     width: 12vw;
     height: 7vh;
-}
-
-.time2{
-    padding-left: 0.3vw;
-    background-color: rgb(181, 181, 181);
-    width: 15vw;
-    height: 8vh;
-    line-height: 8vh;
-    border: 1px solid #7f7f7f;
-    border-top: none;
-    font-size: large;
-}
-
-.time4{
-    border: #7f7f7f solid 1px;
-    border-left: none;
-    border-right: none;
-    border-top: none;
-    height: 8vh;
-    line-height: 8vh;
-    width: 66vw;
-}
-
-.time5{
-    margin: 0.3vw;
 }

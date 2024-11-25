@@ -1,165 +1,72 @@
-.app {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-header {
-    display: flex;
-    background-color: rgba(0, 106, 127, 0.817);
-    box-sizing: border-box;
-    align-items: center;
-    justify-content: left;
-    height: 10vh;
-}
-
-.header-right{
-    display: flex;
-}
-
-main {
-    display: flex;
-    flex-direction: row;
-    flex-grow: 1;
-}
-
-nav {
-    width: 18vw;
-    background-color: rgb(215, 215, 215);
-    box-sizing: border-box;
-    text-align: center;
-    border: none;
-}
-
-
-.home {
-    width: 100%;
-    height: 6vh;
-    border: none;
-    margin-top: 0.5vh;
-    font-size: 1.5vw;
-}
-
-.stock {
-    width: 100%;
-    height: 6vh;
-    border: none;
-    margin-top: 0.5vh;
-    font-size: 1.5vw;
-}
-
-.goods {
-    width: 100%;
-    height: 6vh;
-    border: none;
-    margin-top: 0.5vh;
-    font-size: 1.5vw;
-}
-
-.member {
-    width: 100%;
-    height: 6vh;
-    border: none;
-    margin-top: 0.5vh;
-    font-size: 1.5vw;
-}
-
-.authority {
-    width: 100%;
-    height: 6vh;
-    border: none;
-    margin-top: 0.5vh;
-    font-size: 1.5vw;
-}
-
-.flex-content {
-    flex-grow: 1;
-    background-color: rgb(215, 215, 215);
-    box-sizing: border-box;
-    border: none;
-}
-
-.home-container{
-    background-color: #ffffff;
-    margin: 0.5vw;
-    margin-bottom: 0;
-    margin-right: 0;
-    height: 100vh;
-}
-
-#calendar {
-    width: 2vw;
-    border-collapse: collapse;
-    font-family: sans-serif;
-}
-
-table {
-  width: 100%;
-}
-
-th, td {
-  text-align: center;
-  padding: 3vw;
-  font-size: 2vw;
-}
-
-td {
-  font-weight: bold;
-}
-
-h2 {
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    font-size: 2vw;
+/* ヘッダー（年月とボタン） */
+div.calendar_header {
+    background-color: #f00;
+    width: 50vw;
     margin-left: 3vw;
-}
-
-header h1 {
-    width: 20vw;
-    height: auto;
-    margin: 1px;
+  }
+  
+  #year_month_label{
+    color: white;
+    text-align: center;
+    font-weight: bold;
     font-size: 2vw;
-}
+  }
 
-.OCHAZON {
-    width: 8vw;
-    height: 8vh;
-    object-fit: cover;
-}
+  /* カレンダーテーブル */
+  table.calendar_tbl {
+    min-width: 50vw;
+    border: 1px solid;
+    border-collapse: collapse;
+    margin-left: 3vw;
+  }
+  
+  /* カレンダーテーブルの見出し（曜日） */
+  table.calendar_tbl tr th {
+    text-align: center;
+    border: 1px solid rgb(181, 181, 181);
+  }
+  
+  /* カレンダーテーブルの見出し（日曜日） */
+  table.calendar_tbl tr th:first-child {
+    color: #f00;
+  }
+  
+  /* カレンダーテーブルの見出し（土曜日） */
+  table.calendar_tbl tr th:last-child {
+    color: #00f;
+  }
+  
+  /* カレンダーテーブルの日付部分 */
+  table.calendar_tbl tr td {
+    vertical-align: middle;
+    text-align: center;
+    border: 1px solid rgb(181, 181, 181);
+    height: 3em;
+  }
+  
+  /* カレンダーテーブルで日付が入らない部分 */
+  table.calendar_tbl tr td.no_date {
+    background-color: #f2f2f2;
+  }
+  
+  /* カレンダーテーブルの日付の部分（日曜日） */
+  table.calendar_tbl tr td:first-child {
+    z-index: 10;
+    background-color: #fadbda;
+    color: #f00;
+  }
+  
+  /* カレンダーテーブルの日付の部分（土曜日） */
+  table.calendar_tbl tr td:last-child {
+    background-color: #ddeeff;
+    color: #00f;
+  }
+  
+  /* マウスオーバー時 */
+  table.calendar_tbl tr td.with_date:hover {
+    background-color: #fadfc0;
+  }
 
-.notice {
-    width: 5vw;
-    height: 5vh;
-    object-fit: cover;
-}
-
-.user {
-    width: 5vw;
-    height: 5vh;
-    object-fit: cover;
-}
-
-.home:hover{
-    background-color: rgb(116, 116, 116);
-}
-
-.stock:hover{
-    background-color: rgb(116, 116, 116);
-}
-
-.goods:hover{
-    background-color: rgb(116, 116, 116);
-}
-
-.member:hover{
-    background-color: rgb(116, 116, 116);
-}
-
-.authority:hover{
-    background-color: rgb(116, 116, 116);
-}
-
-
-
+  .stock-container{
+    padding-top: 2vh;
+  }
