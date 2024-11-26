@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OCHAZON</title>
+  <link rel="stylesheet" href="../style/style.css">
+</head>
+
+<body>
+  <div class="header_root">
+    <div class="header_left">
+      <a href="./home.html" class="header"><img src="../images/ヘッダー関連/ロゴ.png" alt="ホームアイコン" width="200px"></a>
+    </div>
+    <div class="header_center">
+      <form method="get" action="飛ぶページ">
+        <input name="search" type="text" class="search" placeholder="キーワードを入力"><input type="submit" value="検索">
+      </form>
+    </div>
+    <div class="header_right">
+        <a href="#cart" class="header"><img src="../images/ヘッダー関連/カート.png" alt="カートアイコン" width="100" height="100"></a>
+        <a href="#user" class="header"><img src="../images/ヘッダー関連/ユーザー.png" alt="ユーザーアイコン" width="100" height="100"></a>
+    </div>
+  </div>
+
+  <div class="detail_root"><!-- 商品の詳細 -->
+
+
+    <div class="detail_imgcontainer"><!-- 左の画像 -->
+        <!--ラジオボタンは先頭に-->
+         <input type="radio" name="detail_img" id="detail_img1" checked>
+         <input type="radio" name="detail_img" id="detail_img2">
+         <input type="radio" name="detail_img" id="detail_img3">
+         <input type="radio" name="detail_img" id="detail_img4">
+         <input type="radio" name="detail_img" id="detail_img5">
+        <!--大きく表示する画像重ね合わせやすいように-->
+        <div class="detail_btn">
+          <img src="../images/種類別商品一覧/ランキング1.png" alt="ランキング画像">
+          <img src="../images/種類別商品一覧/ランキング2.png" alt="ランキング画像">
+          <img src="../images/種類別商品一覧/ランキング3.png" alt="ランキング画像">
+          <img src="../images/種類別商品一覧/ランキング4.png" alt="ランキング画像">
+          <img src="../images/種類別商品一覧/ランキング5.png" alt="ランキング画像">
+        </div>
+        <!--サムネイル画像はリスト形式に-->
+         <ul>
+          <li><label for="detail_img1"><img src="../images/種類別商品一覧/ランキング1.png" alt="ランキングボタン"></label></li>
+          <li><label for="detail_img2"><img src="../images/種類別商品一覧/ランキング2.png" alt="ランキングボタン"></label></li>
+          <li><label for="detail_img3"><img src="../images/種類別商品一覧/ランキング3.png" alt="ランキングボタン"></label></li>
+          <li><label for="detail_img4"><img src="../images/種類別商品一覧/ランキング4.png" alt="ランキングボタン"></label></li>
+          <li><label for="detail_img5"><img src="../images/種類別商品一覧/ランキング5.png" alt="ランキングボタン"></label></li>
+         </ul>
+        </div><!-- 左の画像 -->
+
+        <div class="detail_exnotes">
+            <div class="detail_title">何たら茶</div><hr>
+            <div class="detail_price">
+              <div class="detail_money_mark">￥</div>
+              <div class="detail_money">100,000</div>
+              <div class="detail_tax">税込み(￥100/本)</div>  
+            </div>
+            <div class="detail_buy">
+              数量：
+              <select name="quantiy">
+                <option value="one">1</option>
+                <option value="two">2</option>
+                <option value="three">3</option>
+                <option value="four">4</option>
+                <option value="five">5</option>
+                <option value="six">6</option>
+                <option value="seven">7</option>
+                <option value="eight">8</option>
+                <option value="nine">9</option>
+                </select>
+            </div>
+        </div>
+
+   </div><!-- 商品の詳細 -->
+
+</body>
