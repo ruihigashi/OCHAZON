@@ -1,8 +1,5 @@
 /* style.css */
 
-* {
-    box-sizing: border-box;
-}
 
 body {
     font-family: Arial, sans-serif;
@@ -10,9 +7,14 @@ body {
     padding: 0;
     background-color: #f7f7f7;
     display: flex;
+    /* フレックスボックスを有効にする */
     justify-content: center;
+    /* 水平方向に中央揃え */
     align-items: center;
+    /* 垂直方向に中央揃え */
     height: 100vh;
+    /* 画面の高さ全体を指定 */
+    flex-flow: column;
 }
 
 .container {
@@ -22,8 +24,13 @@ body {
     overflow: hidden;
     background-color: #ffffff;
     display: flex;
+    /* フレックスボックスを有効にする */
     flex-direction: column;
+    /* 縦方向の配置 */
     align-items: center;
+    /* 子要素を中央揃え */
+    text-align: center;
+    /* テキストの中央揃え */
 }
 
 .header {
@@ -51,4 +58,37 @@ body {
     font-size: 0.8em;
     color: #888;
     width: 100%;
+}
+
+.purchase {
+    margin-top: 4vh;
+    text-align: center;
+}
+
+#go_purchase {
+    width: 20vw;
+    height: 5vh;
+    font-weight: bold;
+    font-size: large;
+    color: #fff; /* テキストを白に */
+    background-color: #ff8800;
+    border: none;
+    border-radius: 8px; /* 角丸を追加 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* シャドウで立体感を */
+    cursor: pointer; /* カーソルをポインタに */
+    transition: all 0.3s ease; /* なめらかな変化を */
+}
+
+/* ホバー時のスタイル */
+#go_purchase:hover {
+    background-color: #ff6f00; /* 少し濃いオレンジに変化 */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* シャドウを強調 */
+    transform: translateY(-2px); /* 少し浮くアニメーション */
+}
+
+/* アクティブ時のスタイル */
+#go_purchase:active {
+    background-color: #e65c00; /* 押されたときさらに濃い色 */
+    transform: translateY(0); /* 元に戻す */
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15); /* 押された感じに */
 }

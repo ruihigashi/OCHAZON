@@ -1,3 +1,23 @@
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        include_once '../server/user_input.php';
+        Input(
+            $_POST['username'],
+            $_POST['email'],
+            $_POST['password'],
+            $_POST['last-name'],
+            $_POST['first-name'],
+            $_POST['last-name-kana'],
+            $_POST['first-name-kana'],
+            $_POST['postal-code'],
+            $_POST['prefecture'],
+            $_POST['city'],
+            $_POST['address'],
+            $_POST['building']
+        );
+}
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -22,17 +42,17 @@
             <h2>入力情報確認</h2>
 
             <?php
-            echo '<p><strong>ユーザー名</strong><br>' ,$_POST['username'],'</p><br>';
-            echo '<p><strong>メールアドレスまたは携帯電話番号</strong><br>' , $_POST['email'] , '</p><br>';
-            echo '<p><strong>パスワードの設定（必須）</strong><br>' , $_POST['password'] , '</p><br>';
-            echo '<p><strong>氏名（漢字）</strong><br>' , $_POST['last-name'] , $_POST['first-name'] , '</p><br>';
-            echo '<p><strong>氏名（カタカナ）</strong><br>' , $_POST['last-name-kana'] , $_POST['first-name-kana'] , '</p>';
-            echo '<p><strong>住所</strong><br>' , $_POST['postal-code'] , $_POST['prefecture'] , $_POST['city'] , $_POST['address'] , $_POST['building'] , '</p>';
+            echo '<p><strong>ユーザー名</strong><br>', $_POST['username'], '</p><br>';
+            echo '<p><strong>メールアドレスまたは携帯電話番号</strong><br>', $_POST['email'], '</p><br>';
+            echo '<p><strong>パスワードの設定（必須）</strong><br>', $_POST['password'], '</p><br>';
+            echo '<p><strong>氏名（漢字）</strong><br>', $_POST['last-name'], $_POST['first-name'], '</p><br>';
+            echo '<p><strong>氏名（カタカナ）</strong><br>', $_POST['last-name-kana'], $_POST['first-name-kana'], '</p>';
+            echo '<p><strong>住所</strong><br>', $_POST['postal-code'], $_POST['prefecture'], $_POST['city'], $_POST['address'], $_POST['building'], '</p>';
             ?>
         </div>
 
         <div class="registration-button">
-            <form action="4login.html" method="post" class="con-button">
+            <form action="1login.php" method="post" class="con-button">
                 <button class="confirm-button">ユーザーを登録する</button>
             </form>
         </div>

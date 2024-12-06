@@ -24,37 +24,37 @@
         </header>
         <main>
             <nav>
-            <form action="home_admin.php">
-                <input type="submit" value="ホーム" class="home"><br>
-            </form>
+                <form action="home_admin.php">
+                    <input type="submit" value="ホーム" class="home"><br>
+                </form>
 
-            <form action="stock_management.php">
-                <input type="submit" value="在庫管理" class="stock"><br>
-            </form>
+                <form action="stock_management.php">
+                    <input type="submit" value="在庫管理" class="stock"><br>
+                </form>
 
-            <form action="goods_management.php">
-                <input type="submit" value="商品管理" class="goods"><br>
-            </form>
+                <form action="goods_management.php">
+                    <input type="submit" value="商品管理" class="goods"><br>
+                </form>
 
-            <form action="member_management.php">
-                <input type="submit" value="会員管理" class="member"><br>
-            </form>
+                <form action="member_management.php">
+                    <input type="submit" value="会員管理" class="member"><br>
+                </form>
 
-            <form action="authority_management.php">
-                <input type="submit" value="権限管理" class="authority"><br>
-            </form>
+                <form action="authority_management.php">
+                    <input type="submit" value="権限管理" class="authority"><br>
+                </form>
             </nav>
-            
+
             <div class="flex-content">
                 <h2>ホーム</h2>
-            <div class="stock-container">
-                <div class="calendar_area">
-                    <div class="calendar_header">
-                      <p id="year_month_label"></p>
+                <div class="stock-container">
+                    <div class="calendar_area">
+                        <div class="calendar_header">
+                            <p id="year_month_label"></p>
+                        </div>
+                        <div id="calendar_body"></div>
                     </div>
-                    <div id="calendar_body"></div>
-                  </div>
-            </div>
+                </div>
 
 
         </main>

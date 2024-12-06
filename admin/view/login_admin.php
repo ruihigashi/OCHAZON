@@ -15,8 +15,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <body>
     <header>
-        <img src="../images/OCHAZON.png " alt="ロゴ画像" class="OCHAZON">
-        <h3>管理システム</h3>
+        <a href="home_admin.php"><img src="../images/OCHAZON.png" alt="ロゴ画像" class="OCHAZON"></a>
+        <h1>管理システム</h1>
     </header>
 
     <main>

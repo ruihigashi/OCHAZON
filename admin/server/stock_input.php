@@ -18,7 +18,7 @@ function Input($category, $product_id, $product_name, $supplier_name, $manager_n
             header("Location: stock_management.php");
             echo '登録に成功しました<br>';
         } else {
-            header("Location: stock_registration.php");
+            header("Location: stock_management.php");
             echo '登録に失敗しました<br>';
         }
     } catch (PDOException $e) {

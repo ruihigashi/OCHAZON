@@ -16,7 +16,7 @@
                 header("Location: goods_management.php");
                 echo '登録に成功しました<br>';
             }else{
-                header("Location: goods_registration.php");
+                header("Location: goods_management.php");
                 echo '登録に失敗しました<br>';
             }
 

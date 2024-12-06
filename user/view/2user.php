@@ -103,11 +103,6 @@
                 <label for="building">建物名／部屋番号</label>
                 <input type="text" id="building" name="building">
 
-                <div class="checkbox-group">
-                    <input type="checkbox" id="default-address" name="defaultAddress">
-                    <label for="default-address">いつもの住所に届ける</label>
-                </div>
-
                 <button class="submit-button">確認に進む</button>
             </form>
         </div>

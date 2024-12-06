@@ -1,3 +1,28 @@
+<?php
+session_start();
+require_once '../server/connect_database.php';
+
+try {
+  $pdo = connectDatabase();
+} catch (PDOException $e) {
+  echo 'データベース接続エラー: ' . htmlspecialchars($e->getMessage());
+  exit;
+}
+
+$sql = null;
+$params = [];
+$results = null;
+
+// 検索処理
+if (isset($_GET['search']) && !empty($_GET['search'])) {
+    $sql = $pdo->prepare('SELECT * FROM productMg WHERE product_name LIKE ?');
+    $params[] = '%' . $_GET['search'] . '%';
+
+    $sql->execute($params);
+    $results = $sql->fetchAll(PDO::FETCH_ASSOC);
+}
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -12,12 +37,6 @@
   <div class="header_root">
     <div class="header_left">
       <a href="./home.html" class="header"><img src="../images/rogo.png" alt="ホームアイコン" width="200px"></a>
-    </div>
-    <div class="header_center">
-      <form method="get" action="ocha_search.php">
-        <input name="search" type="text" class="search" placeholder="キーワードを入力">
-        <input type="submit" value="検索">
-      </form>
     </div>
     <div class="header_right">
       <a href="#cart" class="header"><img src="../images/cart.png" alt="カートアイコン" width="100" height="100"></a>
@@ -88,23 +107,10 @@
 
       <div class="ocha_list">
         <?php
-        $pdo = new PDO(
-          'mysql:host=mysql309.phy.lolipop.lan;
-          dbname=LAA1553843-ochazon;charset=utf8',
-          'LAA1553843',
-          'pass0421'
-        );
-
-        $stmt = "SELECT image,product_name,price FROM productMg WHERE product_name = '玉露'";
-        $result1 = $pdo->query($stmt);
-        $teaList = $result1->fetchAll(PDO::FETCH_ASSOC);
-
-        $teaCount = count($teaList);
-        if ($teaCount > 0) {
           echo '<div class="line">';
           $count = 0;
 
-          foreach ($teaList as $item) {
+          foreach ($results as $item) {
             echo '<div class="list_commodity">';
             echo '<form action="detail.php" method="POST">';
             echo '<input type="hidden" name="name" value="' . htmlspecialchars($item["product_name"], ENT_QUOTES, 'UTF-8') . '">';
@@ -122,10 +128,6 @@
               echo '</div><div class="line">'; // 現在の行を閉じて新しい行を開く
             }
           }
-
           echo '</div>'; // 最後の行を閉じる
-        } else {
-          echo '<p>商品が見つかりません。</p>';
-        }
         ?>
       </div>

@@ -1,3 +1,30 @@
+<?php
+require_once '../server/connect_database.php';
+
+try {
+    $pdo = connectDatabase();
+} catch (PDOException $e) {
+    echo 'データベース接続エラー: ' . htmlspecialchars($e->getMessage());
+    exit;
+}
+
+$sql = null;
+$params = [];
+$results = [];
+
+// 検索処理
+if (isset($_GET['search']) && !empty($_GET['search'])) {
+    $sql = $pdo->prepare('SELECT * FROM product WHERE product_id LIKE ? OR product_name LIKE ?');
+    $searchTerm = '%' . $_GET['search'] . '%';
+    $params[] = $searchTerm;
+    $params[] = $searchTerm;
+
+    $sql->execute($params);
+    $results = $sql->fetchAll(PDO::FETCH_ASSOC);
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -6,7 +33,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/reset.css" type="text/css">
     <link rel="stylesheet" href="../style/style.css" type="text/css">
-    <link rel="stylesheet" href="../style/authority_style.css" type="text/css">
     <title>管理システム ログイン</title>
 </head>
 
@@ -46,18 +72,33 @@
             </nav>
 
             <div class="flex-content">
-                <h2>権限管理</h2>
+                <h2>在庫管理</h2>
                 <div class="stock-container">
                     <div class="list">
 
                         <div class="stock-list">
                             <div class="stock-list2">
-                                <label for="select">一般管理者</label>
+                                <label for="select">在庫一覧</label>
                             </div>
                         </div>
 
+                        <div class="select">
+                            <select name="stocks" id="stock">
+                                <option value="">すべて</option>
+                            </select><br>
+                        </div>
+                    </div>
+
+                    <div class="search-box">
+                        <p class="search_result">検索結果</p>
+                        <input type="submit" value="リセット" class="reset">
+
                         <div class="btn-click">
-                            <a href="authority_registration.php">
+                            <a href="javascript:location.reload()" rel="nofollow">
+                                <img src="../images/reload.png" alt="再読み込み" id="reload">
+                            </a>
+
+                            <a href="goods_registration.php">
                                 <img src="../images/plus.png" alt="クリックで遷移" id="plus">
                             </a>
                             <img src="../images/choice.png" alt="選択" id="choice">
@@ -65,46 +106,23 @@
                     </div>
                     <?php
 
-                    // データベース接続
-                    $pdo = new PDO(
-                        'mysql:host=mysql309.phy.lolipop.lan; dbname=LAA1553843-ochazon;charset=utf8',
-                        'LAA1553843',
-                        'pass0421'
-                    );
+                        echo '<table class="table">';
+                        echo '<tr><th>分類</th><th>品番号</th><th>品名</th><th>在庫</th><th>事業者名</th></tr>';
 
-                    // SQLクエリ
-                    $stmt1 = "SELECT administrator_id, first_name, last_name, mail, birthday, address FROM administrator";
-                    $result2 = $pdo->query($stmt1);
-                    $administratorList = $result2->fetchAll(PDO::FETCH_ASSOC);
-
-                    if (!$result2) {
-                        echo "SQL実行エラー: " . implode(", ", $pdo->errorInfo());
-                        exit;
-                    }
-
-                    // データが存在するか確認
-                    if (count($administratorList) > 0) {
-                        echo '<table class="table">'; // 表の開始
-                        echo '<tr><th>管理ID</th><th>管理者名</th><th>メールアドレス</th><th>生年月日</th><th>住所</th></tr>';
-
-                        foreach ($administratorList as $administrator) {
+                        foreach ($results as $stock) {
                             echo '<tr>';
-                            echo '<td>' . htmlspecialchars($administrator["administrator_id"], ENT_QUOTES, 'UTF-8') . '</td>';
-                            echo '<td>' . htmlspecialchars($administrator["last_name"] . ' ' . $administrator["first_name"], ENT_QUOTES, 'UTF-8') . '</td>';
-                            echo '<td>' . htmlspecialchars($administrator["mail"], ENT_QUOTES, 'UTF-8') . '</td>';
-                            echo '<td>' . htmlspecialchars($administrator["birthday"], ENT_QUOTES, 'UTF-8') . '</td>';
-                            echo '<td>' . htmlspecialchars($administrator["address"], ENT_QUOTES, 'UTF-8') . '</td>';
+                            echo '<td>' . htmlspecialchars($stock["category"], ENT_QUOTES, 'UTF-8') . '</td>';
+                            echo '<td>' . htmlspecialchars($stock["product_id"], ENT_QUOTES, 'UTF-8') . '</td>';
+                            echo '<td>' . htmlspecialchars($stock["product_name"], ENT_QUOTES, 'UTF-8') . '</td>';
+                            echo '<td>' . htmlspecialchars($stock["stock"], ENT_QUOTES, 'UTF-8') . '</td>';
+                            echo '<td>' . htmlspecialchars($stock["supplier_name"], ENT_QUOTES, 'UTF-8') . '</td>';
                             echo '</tr>';
                         }
 
+
                         echo '</table>'; // 表の終了
-                    } else {
-                        echo '<p>管理者が見つかりません。</p>';
-                    }
 
                     ?>
-
-
                     <div class="time">
                         <div class="time2">
                             <label for="current-date">最終更新日</label>

@@ -1,4 +1,3 @@
-
 .app {
     width: 100vw;
     height: 100vh;
@@ -16,15 +15,15 @@ header {
     width: 100%;
 }
 
-.title{ 
+.title {
     align-items: center;
     display: flex;
-     margin-right: 35vw;
-     margin-left: 1vw;
+    margin-right: 35vw;
+    margin-left: 1vw;
 }
 
-.title-search{
-    background-color:  rgba(2, 100, 120, 0.817);
+.title-search {
+    background-color: rgba(2, 100, 120, 0.817);
     padding: 0.7vh;
     border: none;
     width: 25vw;
@@ -96,7 +95,7 @@ nav {
     border: none;
 }
 
-.stock-container{
+.stock-container {
     background-color: #ffffff;
     margin: 0.5vw;
     margin-bottom: 0;
@@ -120,13 +119,13 @@ header h1 {
     font-size: 2vw;
 }
 
-.list{
+.list {
     display: flex;
     padding-top: 4vh;
     margin-left: 2vw;
 }
 
-.stock-list{
+.stock-list {
     background-color: rgba(0, 106, 127, 0.817);
     padding-left: 2vw;
     padding-top: 0.4vh;
@@ -137,7 +136,7 @@ header h1 {
     width: 20vw;
 }
 
-.stock-list2{
+.stock-list2 {
     background-color: #ffffff;
     color: rgba(0, 106, 127, 0.817);
     padding-left: 1vw;
@@ -162,67 +161,135 @@ header h1 {
 }
 
 
-.home:hover{
+.home:hover {
     background-color: rgb(116, 116, 116);
 }
 
-.stock:hover{
+.stock:hover {
     background-color: rgb(116, 116, 116);
 }
 
-.goods:hover{
+.goods:hover {
     background-color: rgb(116, 116, 116);
 }
 
-.member:hover{
+.member:hover {
     background-color: rgb(116, 116, 116);
 }
 
-.authority:hover{
+.authority:hover {
     background-color: rgb(116, 116, 116);
 }
 
-select,option{
+select,
+option {
     background-color: rgb(227, 227, 227);
     border: #9d9d9d 1px inset;
     color: rgb(85, 85, 255);
     margin-top: 0.2vh;
 }
 
-.search-box{
+.search-box {
     display: flex;
     margin-left: 2vw;
+    margin-bottom: 2vh;
 }
 
-.search{
-    margin-left: 1vw;
-    margin-right: 1vw;
+.search-but {
+    display: flex;
+}
+
+.search {
+    height: 7vh;
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
     background-color: rgba(0, 106, 127, 0.817);
     border: none;
-    color:#ffffff ;
+    color: #ffffff;
 }
 
-.site-search{
+.reset {
+    width: 7vw;
+    height: 7vh;
+    margin-left: 0.2vw
+}
+
+.site-search {
     width: 15vw;
-
+    height: 7vh;
 }
 
-.btn-click{
+.btn-click {
     display: flex;
     margin-left: 13vw;
 }
 
-#reload{
-margin-right: 3vw;
+#reload {
+    margin-right: 3vw;
 }
 
-#plus{
-margin-right: 3vw;
-padding-top: 1vh;
+#plus {
+    margin-right: 3vw;
+    padding-top: 1vh;
 }
 
-#choice{
-margin-right: 1vw;
-margin-left: 1vw;
-width: 3vw;
+#choice {
+    margin-right: 1vw;
+    margin-left: 1vw;
+    width: 3vw;
+}
+
+
+.table {
+    margin-left: 2vw;
+    width: 75vw;
+    border-collapse: collapse;
+    margin-bottom: 6vh;
+}
+
+.table th,
+.table td {
+    padding: 8px;
+    text-align: start;
+    border: 1px solid #ddd;
+}
+
+.table th {
+    background-color: #f2f2f2;
+}
+
+.time {
+    display: flex;
+    align-items: center;
+    margin-left: 2vw;
+}
+
+.time2 {
+    align-items: center;
+    background-color: rgba(0, 106, 127, 0.817);
+    width: 12vw;
+    height: 5vh;
+    line-height: 5vh;
+    border: none;
+    font-size: large;
+    color: white;
+    padding-left: 3vw;
+}
+
+.time5 {
+    display: flex;
+    text-align: center;
+    border: none;
+    outline: none;
+    height: 5vh;
+    line-height: 5vh;
+    width: 30vw;
+    background-color: #c7c7c7
+}
+
+.search_result {
+    margin-top: 1vh;
+    margin-right: 20vw;
+    font-weight: bold;
+    font-size: 2vw;
 }

@@ -56,15 +56,24 @@ input[type="submit"]:hover {
 }
 
 input[type="submit"] {
-  width: 100px; /* 幅を調整（必要に応じて変更） */
-  height: 47px; /* 高さを検索バーと同じにする */
-  font-size: 18px; /* ボタンのフォントサイズ */
-  padding: 10px 20px; /* ボタンの余白 */
-  border-radius: 5px; /* ボタンを丸くする */
-  border: 1px solid #595959; /* ボタンの枠線 */
-  background-color: #c0c0c0; /* ボタンの背景色 */
-  color: rgb(0, 0, 0); /* ボタンの文字色 */
-  cursor: pointer; /* マウスカーソルを手のひらに */
+  width: 100px;
+  /* 幅を調整（必要に応じて変更） */
+  height: 47px;
+  /* 高さを検索バーと同じにする */
+  font-size: 18px;
+  /* ボタンのフォントサイズ */
+  padding: 10px 20px;
+  /* ボタンの余白 */
+  border-radius: 5px;
+  /* ボタンを丸くする */
+  border: 1px solid #595959;
+  /* ボタンの枠線 */
+  background-color: #c0c0c0;
+  /* ボタンの背景色 */
+  color: rgb(0, 0, 0);
+  /* ボタンの文字色 */
+  cursor: pointer;
+  /* マウスカーソルを手のひらに */
 }
 
 .home_slider1 {
@@ -304,11 +313,12 @@ a {
 }
 
 .ocha_list {
-  margin: 40px;
-  font-size: 30px;
+  display: flex;
+  margin: 1vw;
 }
 
 .list_img {
+  margin-left: 5vw;
   width: 30vw;
   height: 30vh;
 }
@@ -322,7 +332,8 @@ a {
 }
 
 .list_cartbtn {
-  margin-top: -35px;
+  margin-left: 1.5vw;
+  margin-top: 1vh;
   height: auto;
   width: 200px;
   background-color: #d4ff00;
@@ -332,18 +343,13 @@ a {
   color: #000;
 }
 
-.list_commodity {
-  display: flex;
-  width: 80vw;
-  justify-content: center;
-}
+.list_commodity {}
 
 /* お茶種類 */
 /* 詳細 */
 
 .detail_imgcontainer {
   margin-top: 80px;
-  margin-left: 40px;
 }
 
 .detail_imgcontainer .detail_btn {
@@ -504,7 +510,7 @@ label img:hover {
   margin-top: 50px;
 }
 
-.detail_cartin {
+#detail_cartin {
   height: 10vh;
   width: 35vw;
   background-color: #d4ff00;
@@ -519,8 +525,9 @@ label img:hover {
 .img-transition {
   background: #d9d9d9;
   margin: 1vw;
-  width: 20vw;
-  height: 40vh;
+  width: 15vw;
+  height: 50vh;
+  font-size: 1.5vw;
 }
 
 .img-transition1 {
@@ -528,7 +535,7 @@ label img:hover {
   border: none;
 }
 
-.detail_buynow{
+#detail_buynow {
   height: 10vh;
   width: 35vw;
   background-color: #ff8800;
@@ -537,4 +544,52 @@ label img:hover {
   text-align: center;
   color: #000;
   margin-left: 7vw;
+}
+
+.gyokuro {
+  width: 14vw;
+  height: 30vh;
+}
+
+.detail {
+  margin-top: 1vh;
+  font-size: large;
+}
+
+.detail_introduction {
+  margin-top: 2vh;
+  font-size: large;
+}
+
+.input-group postal-code-group {
+  display: flex;
+}
+
+.slide-container {
+  width: 100%;
+  margin: 50px auto;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.slide-wrapper {
+  display: flex;
+  animation: slide-flow 20s infinite linear 1s both;
+}
+
+.slide {
+  width: 300px;
+  object-fit: cover;
+  border: 1px solid #ddd;
+}
+
+@keyframes slide-flow {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
 }

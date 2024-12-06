@@ -40,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <di class="app">
         <header>
             <div class="title">
-                <img src="../images/OCHAZON.png" alt="ロゴ画像" class="OCHAZON">
+                <a href="home_admin.php"><img src="../images/OCHAZON.png" alt="ロゴ画像" class="OCHAZON"></a>
                 <h1>管理システム</h1>
             </div>
 

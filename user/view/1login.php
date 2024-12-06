@@ -1,10 +1,25 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    include_once '../server/login_user.php';
-    login_user(
-        $_POST['email'],
-        $_POST['password']
-    );
+session_start();
+require_once '../server/connect_database.php';
+
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    try {
+        $pdo = connectDatabase();
+        $sql = $pdo->prepare('SELECT * FROM user WHERE email = ? and password = ?');
+        $sql->execute([$_POST['email'], $_POST['password']]);
+        $user = $sql->fetch();
+
+        $username = $user['username'];
+
+        if ($user) {
+            header("Location: 4loginok.php?username=$username");
+            exit();
+        } else {
+            $error_message = 'ログインに失敗しました。メールアドレスまたはパスワードが間違っています。';
+        }
+    } catch (PDOException $exception) {
+        echo "Connection error: " . $exception->getMessage();
+    }
 }
 ?>
 
@@ -23,11 +38,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <header>
             <h1>OCHAZON</h1>
         </header>
-        <a href="#" class="back-link">＜ 前のページ</a>
+        <a href="home.html" class="back-link">＜ 前のページ</a>
 
         <div class="login-form">
             <h2>ログイン</h2>
-            <form action="home.html" method="post">
+            <form action="#" method="post">
                 <label for="email">メールアドレスまたは携帯電話番号</label>
                 <input type="text" id="email" name="email">
 
@@ -37,6 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <p class="forgot-password">※パスワードをお忘れの場合</p>
 
                 <button type="submit">ログイン</button>
+                <p style="color: red;"><?= $error_message ?></p>
             </form>
         </div>
 
