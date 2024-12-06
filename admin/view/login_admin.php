@@ -21,7 +21,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <main>
         <p>ログイン</p>
-        <form action="" method="post">
+        <form action="#" method="post">
             <div class="input_box">
                 <label for="name">管理者ID</label><br>
                 <input type="text" name="id" id="name" required><br>
@@ -30,11 +30,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
 
 
-
-            <form action="#" method="post">
                 <input type="submit" value="ログイン" class="login">
             </form>
-        </form>
     </main>
 
 </body>

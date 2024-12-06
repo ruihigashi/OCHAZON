@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_POST['product_name'],
         $_POST['supplier_name'],
         $_POST['manager_name'],
-        $_POST['stock'],
+        $_POST['stock_quantity'],
         $_POST['remarks'],
         $_POST['registration_date']
     );
@@ -40,34 +40,35 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </header>
         <main>
             <nav>
-                <form action="home_admin.html">
+                <form action="home_admin.php">
                     <input type="submit" value="ホーム" class="home"><br>
                 </form>
 
-                <form action="stock_management.html">
+                <form action="stock_management.php">
                     <input type="submit" value="在庫管理" class="stock"><br>
                 </form>
 
-                <form action="goods_management.html">
+                <form action="goods_management.php">
                     <input type="submit" value="商品管理" class="goods"><br>
                 </form>
 
-                <form action="member_management.html">
+                <form action="member_management.php">
                     <input type="submit" value="会員管理" class="member"><br>
                 </form>
 
-                <form action="authority_management.html">
+                <form action="authority_management.php">
                     <input type="submit" value="権限管理" class="authority"><br>
                 </form>
             </nav>
 
             <div class="flex-content">
                 <div class="flex">
-                    <a href="stock_management.html">
+                    <a href="stock_management.php">
                         <img src="../images/back.png" alt="戻るボタン" id="back-btn">
                     </a>
                     <h2>製品情報の入力</h2>
                 </div>
+                <form action="#" method="post">
                 <div class="stock-container">
 
                     <div class="category">
@@ -143,7 +144,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     </div>
 
                     <div class="Registration">
-                        <form action="stock_management.html" method="post">
                             <input type="submit" value="登録" class="Registration2"><br>
                         </form>
                     </div>
@@ -152,4 +152,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <script src="../script/date_display.js"></script>
 </body>
 
-</html>
+</php>

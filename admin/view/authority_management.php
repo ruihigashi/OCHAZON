@@ -23,23 +23,23 @@
         </header>
         <main>
             <nav>
-            <form action="home_admin.html">
+            <form action="home_admin.php">
                 <input type="submit" value="ホーム" class="home"><br>
             </form>
 
-            <form action="stock_management.html">
+            <form action="stock_management.php">
                 <input type="submit" value="在庫管理" class="stock"><br>
             </form>
 
-            <form action="goods_management.html">
+            <form action="goods_management.php">
                 <input type="submit" value="商品管理" class="goods"><br>
             </form>
 
-            <form action="member_management.html">
+            <form action="member_management.php">
                 <input type="submit" value="会員管理" class="member"><br>
             </form>
 
-            <form action="authority_management.html">
+            <form action="authority_management.php">
                 <input type="submit" value="権限管理" class="authority"><br>
             </form>
             </nav>
@@ -56,7 +56,7 @@
                     </div>
 
                     <div class="btn-click">
-                        <a href="authority_registration.html">
+                        <a href="authority_registration.php">
                             <img src="../images/plus.png" alt="クリックで遷移" id="plus">
                         </a>
                         <img src="../images/choice.png" alt="選択" id="choice">
@@ -71,4 +71,4 @@
         <script src="../script/reload.js/"></script>
 </body>
 
-</html>
+</php>

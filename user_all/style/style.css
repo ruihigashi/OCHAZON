@@ -304,6 +304,7 @@ a {
 }
 
 .ocha_list {
+  display: flex;
   margin: 40px;
   font-size: 30px;
 }
@@ -322,7 +323,8 @@ a {
 }
 
 .list_cartbtn {
-  margin-top: -35px;
+  margin-left: 5vw;
+  margin-top: 1vh;
   height: auto;
   width: 200px;
   background-color: #d4ff00;
@@ -332,10 +334,8 @@ a {
   color: #000;
 }
 
-.list_commodity {
-  display: flex;
-  width: 80vw;
-  justify-content: center;
+.ocha_list{
+  display:flex;
 }
 
 /* お茶種類 */
@@ -520,7 +520,8 @@ label img:hover {
   background: #d9d9d9;
   margin: 1vw;
   width: 20vw;
-  height: 40vh;
+  height: 50vh;
+  font-size: large;
 }
 
 .img-transition1 {
@@ -537,4 +538,9 @@ label img:hover {
   text-align: center;
   color: #000;
   margin-left: 7vw;
+}
+
+.list_price{
+  font-style: bold;
+  font-size: 1vw;
 }

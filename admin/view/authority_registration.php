@@ -24,30 +24,30 @@
         </header>
         <main>
             <nav>
-            <form action="home_admin.html">
+            <form action="home_admin.php">
                 <input type="submit" value="ホーム" class="home"><br>
             </form>
 
-            <form action="stock_management.html">
+            <form action="stock_management.php">
                 <input type="submit" value="在庫管理" class="stock"><br>
             </form>
 
-            <form action="goods_management.html">
+            <form action="goods_management.php">
                 <input type="submit" value="商品管理" class="goods"><br>
             </form>
 
-            <form action="member_management.html">
+            <form action="member_management.php">
                 <input type="submit" value="会員管理" class="member"><br>
             </form>
 
-            <form action="authority_management.html">
+            <form action="authority_management.php">
                 <input type="submit" value="権限管理" class="authority"><br>
             </form>
             </nav>
             
             <div class="flex-content">
                 <div class="flex">
-                    <a href="stock_management.html">
+                    <a href="stock_management.php">
                         <img src="../images/back.png" alt="戻るボタン" id="back-btn">
                     </a>
                     <h2>管理者登録</h2>
@@ -118,7 +118,7 @@
                     </div>
 
                     <div class="Registration">
-                        <form action="stock_confirmation.html" method="post">
+                        <form action="stock_confirmation.php" method="post">
                             <input type="submit" value="登録" class="Registration2"><br>
                         </form>
                     </div>
@@ -127,4 +127,4 @@
         <script src="../script/reload.js/"></script>
 </body>
 
-</html>
+</php>

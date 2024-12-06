@@ -50,35 +50,36 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </header>
         <main>
             <nav>
-                <form action="home_admin.html">
+                <form action="home_admin.php">
                     <input type="submit" value="ホーム" class="home"><br>
                 </form>
 
-                <form action="stock_management.html">
+                <form action="stock_management.php">
                     <input type="submit" value="在庫管理" class="stock"><br>
                 </form>
 
-                <form action="goods_management.html">
+                <form action="goods_management.php">
                     <input type="submit" value="商品管理" class="goods"><br>
                 </form>
 
-                <form action="member_management.html">
+                <form action="member_management.php">
                     <input type="submit" value="会員管理" class="member"><br>
                 </form>
 
-                <form action="authority_management.html">
+                <form action="authority_management.php">
                     <input type="submit" value="権限管理" class="authority"><br>
                 </form>
             </nav>
 
             <div class="flex-content">
                 <div class="flex">
-                    <a href="goods_management.html">
+                    <a href="goods_management.php">
                         <img src="../images/back.png" alt="戻るボタン" id="back-btn">
                     </a>
                     <h2>商品情報の入力</h2>
                 </div>
 
+                <form action="#" method="post">
                 <div class="stock-container">
                     <div class="category">
                         <div class="category2">
@@ -101,7 +102,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <label for="product_number">商品番号</label>
                         </div>
                         <div class="number6">
-                            <input type="text" id="product_number" class="number5" name="product_number" disabled />
+                            <input type="text" id="product_number" class="number5" name="product_number" />
                         </div>
                     </div>
 
@@ -214,12 +215,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                     <div class="name">
                         <div class="name2">
-                            <label for="image">添付画像</label>
+                            <label for="image">添付画像URL</label>
                         </div>
                         <div class="name6">
-                            <form action="/upload" method="post" enctype="multipart/form-data">
-                                <input type="file" id="image" name="image" accept="image/*">
-                            </form>
+                            <input type="text" id="image" name="image" class="name5" />
                         </div>
                     </div>
 
@@ -233,7 +232,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     </div>
 
                     <div class="Registration">
-                        <form action="goods_management.html" method="post">
                             <input type="submit" value="登録" class="Registration2"><br>
                         </form>
                     </div>
@@ -242,4 +240,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <script src="../script/date_display.js"></script>
 </body>
 
-</html>
+</php>
