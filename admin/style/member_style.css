@@ -209,16 +209,7 @@ select,option{
 
 .btn-click{
     display: flex;
-    margin-left: 13vw;
-}
-
-#reload{
-margin-right: 3vw;
-}
-
-#plus{
-margin-right: 3vw;
-padding-top: 1vh;
+    margin-left: 24.75vw;
 }
 
 #choice{

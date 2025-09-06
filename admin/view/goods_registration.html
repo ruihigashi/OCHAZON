@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/reset.css" type="text/css">
+    <link rel="stylesheet" href="../style/style.css" type="text/css">
+    <link rel="stylesheet" href="../style/goods_plus.css" type="text/css">
+    <title>管理システム ログイン</title>
+</head>
+
+<body>
+    <di class="app">
+        <header>
+            <div class="title">
+                <img src="../images/OCHAZON.png" alt="ロゴ画像" class="OCHAZON">
+                <h1>管理システム</h1>
+            </div>
+
+            <input type="search" id="site-search" name="site-search" class="title-search" placeholder=" search" />
+            <img src="../images/notice.png" alt="通知画像" class="notice">
+            <img src="../images/user.png" alt="ユーザー画像" class="user">
+        </header>
+        <main>
+            <nav>
+            <form action="home_admin.html">
+                <input type="submit" value="ホーム" class="home"><br>
+            </form>
+
+            <form action="stock_management.html">
+                <input type="submit" value="在庫管理" class="stock"><br>
+            </form>
+
+            <form action="goods_management.html">
+                <input type="submit" value="商品管理" class="goods"><br>
+            </form>
+
+            <form action="member_management.html">
+                <input type="submit" value="会員管理" class="member"><br>
+            </form>
+
+            <form action="authority_management.html">
+                <input type="submit" value="権限管理" class="authority"><br>
+            </form>
+            </nav>
+            
+            <div class="flex-content">
+                <div class="flex">
+                    <a href="stock_management.html">
+                        <img src="../images/back.png" alt="戻るボタン" id="back-btn">
+                    </a>
+                    <h2>商品情報の入力</h2>
+                </div>
+            <div class="stock-container">
+
+                    <div class="category">
+                        <div class="category2">
+                            <label for="category3">分類</label>
+                        </div>
+                        <div class="category6">
+                            <input type="text" id="category4" class="category5"/>
+                        </div>
+
+                        <div class="category2">
+                            <label for="category3">値段</label>
+                        </div>
+                        <div class="category6">
+                            <input type="number" id="category4" class="category5"/>
+                        </div>
+                    </div>
+
+                    <div class="number">
+                        <div class="number2">
+                            <label for="number3">商品番号</label>
+                        </div>
+                        <div class="number6">
+                            <input type="text" id="number4" class="number5" disabled/>
+                        </div>
+                    </div>
+
+                    <div class="name">
+                        <div class="name2">
+                            <label for="name3">商品名</label>
+                        </div>
+                        <div class="name6">
+                            <input type="text" id="name4" class="name5"/>
+                        </div>
+                    </div>
+
+                    <div class="overview">
+                        <div class="overview2">
+                            <label for="overview3">商品概要</label>
+                        </div>
+                        <div class="overview6">
+                            <textarea id="overview4" class="overview5" rows="5" cols="100"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="name">
+                        <div class="name2">
+                            <label for="name3">内容量・サイズ</label>
+                        </div>
+                        <div class="name6">
+                            <input type="text" id="name4" class="name5"/>
+                        </div>
+                    </div>
+                    
+                    <div class="category">
+                        <div class="category2">
+                            <label for="category3">名称</label>
+                        </div>
+                        <div class="category6">
+                            <input type="text" id="category4" class="category5"/>
+                        </div>
+
+                        <div class="category2">
+                            <label for="category3">原材料名</label>
+                        </div>
+                        <div class="category6">
+                            <input type="text" id="category4" class="category5"/>
+                        </div>
+                    </div>
+
+                    
+                    <div class="category">
+                        <div class="category2">
+                            <label for="category3">原料原産地</label>
+                        </div>
+                        <div class="category6">
+                            <input type="text" id="category4" class="category5"/>
+                        </div>
+
+                        <div class="category2">
+                            <label for="category3">賞味期限</label>
+                        </div>
+                        <div class="category6">
+                            <input type="date" id="category4" class="category5"/>
+                        </div>
+                    </div>
+
+                    <div class="category">
+                        <div class="category2">
+                            <label for="category3">保存方法</label>
+                        </div>
+                        <div class="category6">
+                            <input type="text" id="category4" class="category5"/>
+                        </div>
+
+                        <div class="category2">
+                            <label for="category3">製造者</label>
+                        </div>
+                        <div class="category6">
+                            <input type="text" id="category4" class="category5"/>
+                        </div>
+                    </div>
+
+                    
+                    <div class="category">
+                        <div class="category2">
+                            <label for="category3">事業者名</label>
+                        </div>
+                        <div class="category6">
+                            <input type="text" id="category4" class="category5"/>
+                        </div>
+
+                        <div class="category2">
+                            <label for="category3">連絡先</label>
+                        </div>
+                        <div class="category6">
+                            <input type="text" id="category4" class="category5"  pattern="^\d{2,4}-\d{2,4}-\d{4}$" title="例: 03-1234-5678 または 090-1234-5678"/>
+                        </div>
+                    </div>
+
+                    <div class="category">
+                        <div class="category2">
+                            <label for="category3">営業時間</label>
+                        </div>
+                        <div class="category6">
+                            <input type="text" id="category4" class="category5"/>
+                        </div>
+
+                        <div class="category2">
+                            <label for="category3">定休日</label>
+                        </div>
+                        <div class="category6">
+                            <input type="text" id="category4" class="category5"/>
+                        </div>
+                    </div>
+
+                    <div class="name">
+                        <div class="name2">
+                            <label for="name3">添付画像</label>
+                        </div>
+                        <div class="name6">
+                            <form action="/upload" method="post" enctype="multipart/form-data">
+                                <input type="file" id="file" name="file" accept="image/*">
+                              </form>
+                        </div>
+                    </div>
+
+                    <div class="time">
+                        <div class="time2">
+                            <label for="time3">登録日時</label>
+                        </div>
+                        <div class="time4">
+                            <div class="time5">
+                            <script type="text/javascript">
+                                var weeks = new Array('日','月','火','水','木','金','土');
+                                
+                                var now = new Date();
+                                
+                                var year = now.getYear(); // 年
+                                var month = now.getMonth() + 1; // 月
+                                var day = now.getDate(); // 日
+                                var week = weeks[ now.getDay() ]; // 曜日
+                                var hour = now.getHours(); // 時
+                                var min = now.getMinutes(); // 分
+                                var sec = now.getSeconds(); // 秒
+                                
+                                if(year < 2000) { year += 1900; }
+                                
+                                // 数値が1桁の場合、頭に0を付けて2桁で表示する指定
+                                if(month < 10) { month = "0" + month; }
+                                if(day < 10) { day = "0" + day; }
+                                if(hour < 10) { hour = "0" + hour; }
+                                if(min < 10) { min = "0" + min; }
+                                if(sec < 10) { sec = "0" + sec; }
+                                
+                                // 表示開始
+                                document.write(year + '年' + month + '月' + day + '日（' + week + '）');
+                                document.write(hour + '時' + min + '分' + sec + '秒</b>');
+                                // 表示終了
+                                
+                                // -->
+                                </script>
+                                </div>
+                        </div>
+                    </div>
+
+                    <div class="Registration">
+                        <form action="stock_confirmation.html" method="post">
+                            <input type="submit" value="登録" class="Registration2"><br>
+                        </form>
+                    </div>
+
+        </main>
+
+</body>
+
+</html>
